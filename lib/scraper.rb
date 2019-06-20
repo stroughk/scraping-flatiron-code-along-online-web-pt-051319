@@ -12,9 +12,17 @@ class Scraper
         puts "Title: #{course.title}"
         puts "  Schedule: #{course.schedule}"
         puts "  Description: #{course.description}"
+        
       end
     end
   end
+  
+  def get_page
+   doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
+  end
+  
+  
+  
   
 end
 
